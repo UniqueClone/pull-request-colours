@@ -1,0 +1,328 @@
+/* Popup styles for Azure DevOps PR File Colors extension */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #333;
+  background: #f9f9f9;
+}
+
+.popup-container {
+  width: 400px;
+  max-height: 600px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Header */
+.popup-header {
+  background: linear-gradient(135deg, #0078d4, #106ebe);
+  color: white;
+  padding: 16px 20px;
+  text-align: center;
+}
+
+.popup-header h1 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.popup-header p {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+/* Content */
+.popup-content {
+  padding: 20px;
+  max-height: 440px;
+  overflow-y: auto;
+}
+
+.url-configuration {
+  border: 2px solid #0078d4;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  background: #f0f8ff;
+}
+
+.url-configuration h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0078d4;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #0078d4;
+  padding-bottom: 8px;
+}
+
+.url-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.url-input-group label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.url-label {
+  font-weight: 500;
+  color: #24292e;
+  font-size: 13px;
+}
+
+.url-help {
+  font-size: 11px;
+  color: #6a737d;
+  font-style: italic;
+}
+
+.url-input-group input[type="text"] {
+  width: 100%;
+  padding: 8px 12px;
+  border: 2px solid #e1e5e9;
+  border-radius: 6px;
+  font-size: 12px;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  background: white;
+  transition: border-color 0.2s ease;
+}
+
+.url-input-group input[type="text"]:focus {
+  outline: none;
+  border-color: #0078d4;
+  box-shadow: 0 0 0 2px rgba(0, 120, 212, 0.2);
+}
+
+.url-input-group input[type="text"]:invalid {
+  border-color: #d13438;
+}
+
+.url-example {
+  font-size: 10px;
+  color: #6a737d;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  background: #f6f8fa;
+  padding: 4px 8px;
+  border-radius: 3px;
+  border-left: 3px solid #0078d4;
+}
+
+.color-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.file-type-group {
+  border: 1px solid #e1e5e9;
+  border-radius: 6px;
+  padding: 16px;
+  background: #fafbfc;
+}
+
+.file-type-group h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #24292e;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #e1e5e9;
+  padding-bottom: 8px;
+}
+
+.color-input-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #f1f3f4;
+}
+
+.color-input-group:last-child {
+  border-bottom: none;
+}
+
+.color-input-group label {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  cursor: pointer;
+}
+
+.file-type-label {
+  font-weight: 500;
+  color: #24292e;
+  font-size: 13px;
+}
+
+.file-example {
+  font-size: 11px;
+  color: #6a737d;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  background: #f6f8fa;
+  padding: 2px 6px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+input[type="color"] {
+  width: 40px;
+  height: 32px;
+  border: 2px solid #e1e5e9;
+  border-radius: 6px;
+  cursor: pointer;
+  background: white;
+  padding: 2px;
+  margin-left: 12px;
+}
+
+input[type="color"]:hover {
+  border-color: #0078d4;
+}
+
+input[type="color"]:focus {
+  outline: none;
+  border-color: #0078d4;
+  box-shadow: 0 0 0 2px rgba(0, 120, 212, 0.2);
+}
+
+/* Webkit color input styling */
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 4px;
+}
+
+/* Footer */
+.popup-footer {
+  padding: 16px 20px;
+  background: #f6f8fa;
+  border-top: 1px solid #e1e5e9;
+}
+
+.button-group {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.btn {
+  flex: 1;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: #0078d4;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #106ebe;
+}
+
+.btn-primary:active {
+  background: #005a9e;
+}
+
+.btn-secondary {
+  background: #f3f4f5;
+  color: #24292e;
+  border: 1px solid #d0d7de;
+}
+
+.btn-secondary:hover {
+  background: #e9ecef;
+  border-color: #bcc5ce;
+}
+
+.btn-secondary:active {
+  background: #dde4ed;
+}
+
+.status-message {
+  text-align: center;
+  font-size: 12px;
+  min-height: 16px;
+  transition: all 0.3s ease;
+}
+
+.status-message.success {
+  color: #28a745;
+}
+
+.status-message.error {
+  color: #dc3545;
+}
+
+/* Scrollbar styling */
+.popup-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.popup-content::-webkit-scrollbar-track {
+  background: #f1f3f4;
+  border-radius: 3px;
+}
+
+.popup-content::-webkit-scrollbar-thumb {
+  background: #c1c8cd;
+  border-radius: 3px;
+}
+
+.popup-content::-webkit-scrollbar-thumb:hover {
+  background: #a8b2ba;
+}
+
+/* Responsive adjustments */
+@media (max-height: 500px) {
+  .popup-content {
+    max-height: 300px;
+  }
+}
+
+/* Focus styles for accessibility */
+.btn:focus {
+  outline: 2px solid #0078d4;
+  outline-offset: 2px;
+}
+
+/* Animation for status messages */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.status-message.show {
+  animation: fadeIn 0.3s ease;
+}

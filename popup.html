@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Azure DevOps PR File Colors</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <header class="popup-header">
+      <h1>File Type Colors</h1>
+      <p>Customize colors for different file types in Azure DevOps pull requests</p>
+    </header>
+
+    <main class="popup-content">
+      <!-- URL Configuration -->
+      <div class="url-configuration">
+        <h3>Azure DevOps Configuration</h3>
+        <div class="url-input-group">
+          <label for="azure-devops-url">
+            <span class="url-label">Pull Request URL Pattern</span>
+            <span class="url-help">Enter your Azure DevOps PR URL pattern (use * for wildcards)</span>
+          </label>
+          <input type="text" id="azure-devops-url" placeholder="https://your-devops-host.com/yourproject/_git/yourrepo/pullrequest*">
+          <div class="url-example">
+            Example: https://dev.azure.com/yourorg/MyProject/_git/MyRepo/pullrequest*
+          </div>
+        </div>
+      </div>
+
+      <div class="color-settings">
+        <!-- TypeScript Files -->
+        <div class="file-type-group">
+          <h3>TypeScript Files</h3>
+          <div class="color-input-group">
+            <label for="color-ts">
+              <span class="file-type-label">.ts files</span>
+              <span class="file-example">example.ts</span>
+            </label>
+            <input type="color" id="color-ts" data-file-type="ts">
+          </div>
+          
+          <div class="color-input-group">
+            <label for="color-tsx">
+              <span class="file-type-label">.tsx files</span>
+              <span class="file-example">component.tsx</span>
+            </label>
+            <input type="color" id="color-tsx" data-file-type="tsx">
+          </div>
+        </div>
+
+        <!-- Test Files -->
+        <div class="file-type-group">
+          <h3>Test Files</h3>
+          <div class="color-input-group">
+            <label for="color-test-ts">
+              <span class="file-type-label">.test.ts files</span>
+              <span class="file-example">utils.test.ts</span>
+            </label>
+            <input type="color" id="color-test-ts" data-file-type="test.ts">
+          </div>
+          
+          <div class="color-input-group">
+            <label for="color-test-tsx">
+              <span class="file-type-label">.test.tsx files</span>
+              <span class="file-example">component.test.tsx</span>
+            </label>
+            <input type="color" id="color-test-tsx" data-file-type="test.tsx">
+          </div>
+        </div>
+
+        <!-- Mapper Files -->
+        <div class="file-type-group">
+          <h3>Mapper Files</h3>
+          <div class="color-input-group">
+            <label for="color-mapper-ts">
+              <span class="file-type-label">.mapper.ts files</span>
+              <span class="file-example">data.mapper.ts</span>
+            </label>
+            <input type="color" id="color-mapper-ts" data-file-type="mapper.ts">
+          </div>
+          
+          <div class="color-input-group">
+            <label for="color-mapper-tsx">
+              <span class="file-type-label">.mapper.tsx files</span>
+              <span class="file-example">component.mapper.tsx</span>
+            </label>
+            <input type="color" id="color-mapper-tsx" data-file-type="mapper.tsx">
+          </div>
+          
+          <div class="color-input-group">
+            <label for="color-mapper-test-ts">
+              <span class="file-type-label">.mapper.test.ts files</span>
+              <span class="file-example">data.mapper.test.ts</span>
+            </label>
+            <input type="color" id="color-mapper-test-ts" data-file-type="mapper.test.ts">
+          </div>
+          
+          <div class="color-input-group">
+            <label for="color-mapper-test-tsx">
+              <span class="file-type-label">.mapper.test.tsx files</span>
+              <span class="file-example">component.mapper.test.tsx</span>
+            </label>
+            <input type="color" id="color-mapper-test-tsx" data-file-type="mapper.test.tsx">
+          </div>
+        </div>
+
+        <!-- Other Files -->
+        <div class="file-type-group">
+          <h3>Other Files</h3>
+          <div class="color-input-group">
+            <label for="color-stories-tsx">
+              <span class="file-type-label">.stories.tsx files</span>
+              <span class="file-example">button.stories.tsx</span>
+            </label>
+            <input type="color" id="color-stories-tsx" data-file-type="stories.tsx">
+          </div>
+          
+          <div class="color-input-group">
+            <label for="color-json">
+              <span class="file-type-label">.json files</span>
+              <span class="file-example">package.json</span>
+            </label>
+            <input type="color" id="color-json" data-file-type="json">
+          </div>
+          
+          <div class="color-input-group">
+            <label for="color-resx">
+              <span class="file-type-label">.resx files</span>
+              <span class="file-example">Resources.resx</span>
+            </label>
+            <input type="color" id="color-resx" data-file-type="resx">
+          </div>
+          
+          <div class="color-input-group">
+            <label for="color-md">
+              <span class="file-type-label">.md files</span>
+              <span class="file-example">README.md</span>
+            </label>
+            <input type="color" id="color-md" data-file-type="md">
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="popup-footer">
+      <div class="button-group">
+        <button id="reset-btn" class="btn btn-secondary">Reset to Defaults</button>
+        <button id="save-btn" class="btn btn-primary">Save Changes</button>
+      </div>
+      <div class="status-message" id="status-message"></div>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
