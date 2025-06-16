@@ -2,7 +2,12 @@
   "manifest_version": 3,
   "name": "Azure DevOps PR File Colors",
   "version": "1.0.0",
-  "description": "Color-code file types in Azure DevOps pull requests for easier review",
+  "description": "Color-code TypeScript file types in Azure DevOps pull requests for easier review",
+  "author": "Ryan Lynch",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uniqueclone/pull-request-colours"
+  },
   "permissions": [
     "storage",
     "activeTab"
